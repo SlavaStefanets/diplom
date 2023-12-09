@@ -1,0 +1,10 @@
+.photoImg {
+    height: 300px;
+    /* width: 100%; */
+    width: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+h5{
+    padding-left: 9em;
+}

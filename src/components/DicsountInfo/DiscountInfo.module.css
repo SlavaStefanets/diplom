@@ -1,0 +1,14 @@
+.h1{
+color:  #FFF;
+font-family: Montserrat;
+font-size: 96px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; 
+}
+.discountInfo{
+  background-image: url('/public/img/mainPageHeder.jpg');
+  background-size: cover;
+  height: 600px;
+  padding: 80px 40px;
+}

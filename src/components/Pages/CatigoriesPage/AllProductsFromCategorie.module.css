@@ -1,0 +1,15 @@
+.photoImg {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.allPrice{
+    display: flex;
+    gap: 16px;
+}
+
+.container{
+  display: flex;
+  gap: 32px;
+  overflow: auto;
+}

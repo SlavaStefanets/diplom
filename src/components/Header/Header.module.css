@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+.navMenu{
+  display: flex;
+  gap: 32px;
+}
+.navMenu a{
+  text-decoration: none;
+  color: #282828;
+  size: 20px;
+  font-weight: 500;
+  Line-height: 26px;
+  font-family: Montserrat;
+}

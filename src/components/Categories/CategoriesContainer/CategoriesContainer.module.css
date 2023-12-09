@@ -1,0 +1,7 @@
+.container{
+  display: flex;
+  gap: 32px;
+  overflow: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,13 @@
+.line{
+  height: 1px;
+  background: #DDD;
+  margin-left: 32px;
+  flex-grow: 1;
+}
+.headerElements{
+  display: flex;
+  align-items: center;
+}
+.container{
+  margin-top: 80px;
+}

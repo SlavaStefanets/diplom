@@ -1,0 +1,23 @@
+.line {
+	height: 1px;
+	background: #ddd;
+	margin-left: 32px;
+	flex-grow: 1;
+}
+.headerElements {
+	display: flex;
+	align-items: center;
+  padding-bottom: 40px;
+}
+.btn {
+	padding: 8px 16px;
+	justify-content: center;
+	color: #8B8B8B;
+  border-radius: 6px;
+  border: 1px solid #DDD;
+  background-color: white;
+  text-align: center;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal; 
+}
