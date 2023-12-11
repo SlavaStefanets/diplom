@@ -1,27 +1,18 @@
 import React from "react";
-import style from "./ProductContainer.module.css";
-import { ProductCard } from "../ProductCard/ProductCard";
+import style from "../AllProductsPage/AllProductsPage.modeule.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { ProductCard } from "../../Product/ProductCard/ProductCard";
 
-export const ProductContainer = () => {
+export const AllProductContainer= () => {
 	const [allProducts, setAllProducts] = useState([]);
 
 	const getAllProducts = async () => {
 		const response = await axios.get(
-			"https://telran-project-backend-y5gf.onrender.com/products/all "
+			"https://telran-project-backend-y5gf.onrender.com/products/all"
 		);
-
-		setAllProducts(
-			response.data.filter((elem) => {
-				if (!elem.discont_price) {
-					return false;
-				} else {
-					return true;
-				}
-			})
-			.slice(0, 4)
-		);
+		setAllProducts(response.data);
+		console.log(response.data);
 	};
 
 	useEffect(() => {

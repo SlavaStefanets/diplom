@@ -1,8 +1,9 @@
 import React from "react";
 import { TitleGlobal } from "../../UI/TitleGlobal/TitleGlobal";
 import style from "./ProductSection.module.css";
-import { ProductContainer } from "../ProductContainer/ProductContainer";
+import { SaleProductContainer } from "../ProductContainer/SaleProductContainer";
 import { Link } from "react-router-dom";
+import {LitlButton} from '../../UI/LitlButton/LitlButton'
 
 export const ProductSection = () => {
 	return (
@@ -10,11 +11,11 @@ export const ProductSection = () => {
 			<div className={style.headerElements}>
 				<TitleGlobal title="Sale" color="black" />
 				<div className={style.line}></div>
-				<button>
+				<LitlButton text="All sales">
 					<Link to={"/allsalespage"}>All sales</Link>
-				</button>
+				</LitlButton>
 			</div>
-			<ProductContainer />
+			<SaleProductContainer />
 		</div>
 	);
 };

@@ -5,26 +5,43 @@
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
-border-bottom: rgba(51, 153, 51, 1);
-  border-radius:  6px;
-background:  #393;
-cursor: pointer;
-
-color:  #FFF;
-text-align: center;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
+	border-radius: 6px;
+	background: #393;
+	cursor: pointer;
+	border: transparent;
+	color: #fff;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
 }
-.btn :hover{
-  display: flex;
+.btn:hover {
+	display: flex;
+	width: 284px;
+	padding: 16px 32px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: white;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	background-color: black;
+}
+.btn:active {
+display: flex;
 width: 284px;
 padding: 16px 32px;
 justify-content: center;
 align-items: center;
 gap: 10px;
-color:  #FFF;
+border-radius:  6px;
+border: 1px solid  #282828;
+background:  #FFF;
+color:  #282828;
 text-align: center;
 font-family: Montserrat;
 font-size: 20px;

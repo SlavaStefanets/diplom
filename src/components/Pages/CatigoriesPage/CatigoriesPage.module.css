@@ -1,0 +1,13 @@
+.titleGlobal{
+  padding: 40px 0 40px 40px;
+}
+.nav{
+  display: flex;
+  padding: 40px 0 0 40px;
+}
+.line{
+	height: 1px;
+	background: #ddd;
+	width: 16px;
+  margin-top: 16px;
+}

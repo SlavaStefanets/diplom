@@ -1,0 +1,48 @@
+.priceFromTo {
+	display: flex;
+  gap: 16px
+  ;
+}
+.filter {
+	display: flex;
+	align-items: center;
+  gap: 40px;
+}
+.priceFromTo p {
+  display: flex;
+  align-items: center;
+	color: #282828;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+}
+.priceFromTo input {
+	display: flex;
+ 
+	width: 112px;
+	padding: 8px 16px;
+	align-items: center;
+	gap: 10px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+}
+.discountedItems {
+	display: flex;
+  gap: 16px;
+  color:  #282828;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+}
+.sorted {
+	display: flex;
+  gap: 16px;
+  color: var(--txt-black, #282828);
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 26px */
+}

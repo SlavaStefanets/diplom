@@ -50,3 +50,13 @@
 	border-radius: 12px;
 	border: 1px solid rgb(234, 228, 228);
 }
+.cards {
+	padding-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+}
+@media (max-width: 1380px) {
+	.cards {
+		flex-wrap: wrap;
+	}
+}

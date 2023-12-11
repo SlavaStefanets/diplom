@@ -5,14 +5,14 @@ import axios from 'axios'
 
 
 export const OneProductPage = () => {
-
+ const { id } = useParams();
 const [dataProduct, setDataProduct] = useState({});
 
 const getProduct = async () => {
 	const response = await axios.get(
-		"https://telran-project-backend-y5gf.onrender.com/products/" + id
+		`https://telran-project-backend-y5gf.onrender.com/products/${+id}`
 	);
-  console.log('hello', response.data[0])
+  
 	setDataProduct(response.data[0]);
 };
 
@@ -20,18 +20,18 @@ useEffect(() => {
 	getProduct();
 }, []);
 
-
-  
-  const {id} = useParams();
+const link = `https://telran-project-backend-y5gf.onrender.com`;
+  console.log(dataProduct);
+ 
   return (
-    <div>
-      <img src={dataProduct.image/16}></img>
-      <p>{dataProduct.price}</p>
-      <p>{dataProduct.title}</p>
-      <p>{dataProduct.description}</p>
-      <p></p>
-    </div>
-  )
+		<div>
+			<img src={`${link}${dataProduct.image}`}></img>
+			<p>{dataProduct.price}</p>
+			<p>{dataProduct.title}</p>
+			<p>{dataProduct.description}</p>
+			<p></p>
+		</div>
+	);
 }
 
 // Object { id: 16, title: "Enchanted Garden Mushroom Trio", 
