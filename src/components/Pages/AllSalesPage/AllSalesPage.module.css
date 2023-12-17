@@ -1,0 +1,16 @@
+.line{
+  height: 1px;
+  background: #DDD;
+  width: 32px;
+}
+.headerElements{
+  display: flex;
+  align-items: center;
+  margin: 40px 0 40px 0;
+}
+.container{
+  margin: 40px;
+}
+.allProductsContainer{
+  padding-top: 20px;
+}

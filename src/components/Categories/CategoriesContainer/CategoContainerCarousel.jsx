@@ -32,11 +32,12 @@ export const CategoContainerCarousel = () => {
 			}}
 			// extensions={{ AutoScroll }}
 		>
-			{allCategories.map((el) => (
+			{allCategories.map((el,index) => (
 				<SplideSlide key={el.id}>
 					<CategoryCard
 						img={`https://telran-project-backend-y5gf.onrender.com${el.image}`}
 						title={el.title}
+						categoryNum={index+1}
 					/>
 				</SplideSlide>
 			))}

@@ -14,7 +14,9 @@ export const Header = () => {
 				<Link to={"/allproducts"}>All Products</Link>
 				<Link to={"/allsalespage"}>All sales</Link>
 			</div>
-			<img className={style.cart} src={cart} alt="cart" />
+			<Link to={'/basket'}>
+				<img className={style.cart} src={cart} alt="cart" />
+			</Link>
 		</div>
 	);
 };

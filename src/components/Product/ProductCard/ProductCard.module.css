@@ -15,7 +15,7 @@ h6 {
 .container {
 	position: relative;
 	max-width: 300px;
-    color: rgba(40, 40, 40, 1);
+	color: rgba(40, 40, 40, 1);
 }
 .procent {
 	display: flex;
@@ -27,14 +27,11 @@ h6 {
 	color: white;
 	background: #393;
 }
-.hidden{
-	color: transparent;
-}
 .allPrice {
 	display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-top: 16px;
+	align-items: center;
+	gap: 16px;
+	padding-top: 16px;
 }
 .discountPrice {
 	color: #282828;
@@ -51,8 +48,26 @@ h6 {
 	font-weight: 500;
 	text-decoration-line: line-through;
 }
-.titlePlusPrice{
-    padding: 20px 32px 32px 32px;
-    border: 1px solid rgb(230, 222, 222);
-    border-radius: 0 0 12px 12px;
+.price2 {
+	color: #282828;
+	font-family: Montserrat;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 600;
+}
+.titlePlusPrice {
+	padding: 20px 32px 32px 32px;
+	border: 1px solid rgb(230, 222, 222);
+	border-radius: 0 0 12px 12px;
+}
+.Button2 {
+	position: absolute;
+	margin: 230px 8px 10px 8px;
+	display: none;
+}
+.container:hover .Button2 {
+	display: block;
+}
+.btnFake {
+	display: none;
 }

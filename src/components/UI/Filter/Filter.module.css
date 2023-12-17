@@ -1,16 +1,15 @@
 .priceFromTo {
 	display: flex;
-  gap: 16px
-  ;
+	gap: 16px;
 }
 .filter {
 	display: flex;
 	align-items: center;
-  gap: 40px;
+	gap: 40px;
 }
 .priceFromTo p {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 	color: #282828;
 	font-family: Montserrat;
 	font-size: 20px;
@@ -19,7 +18,7 @@
 }
 .priceFromTo input {
 	display: flex;
- 
+
 	width: 112px;
 	padding: 8px 16px;
 	align-items: center;
@@ -29,20 +28,33 @@
 }
 .discountedItems {
 	display: flex;
-  gap: 16px;
-  color:  #282828;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
+	gap: 16px;
+	color: #282828;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	align-items: center;
+}
+.discountedItems input {
+	width: 36px;
+	height: 36px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
 }
 .sorted {
 	display: flex;
-  gap: 16px;
-  color: var(--txt-black, #282828);
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 130%; /* 26px */
+	gap: 16px;
+	color:  #282828;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	align-items: center;
+}
+select {
+	padding: 8px 16px;
+	background-color: white;
+	border: 1px solid rgb(220, 211, 211);
+	border-radius: 6px;
 }

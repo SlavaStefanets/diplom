@@ -11,11 +11,11 @@ export const ProductSection = () => {
 			<div className={style.headerElements}>
 				<TitleGlobal title="Sale" color="black" />
 				<div className={style.line}></div>
-				<LitlButton text="All sales">
+				<LitlButton text="All sales" path={"/allsalespage"}>
 					<Link to={"/allsalespage"}>All sales</Link>
 				</LitlButton>
 			</div>
-			<SaleProductContainer />
+			<SaleProductContainer visible={false} />
 		</div>
 	);
 };

@@ -70,7 +70,7 @@ export const Filter = ({ saveFunc, copyArr }) => {
 				></input>
 			</div>
 			<div className={style.discountedItems}>
-				Discounted items
+				<div>Discounted items</div>
 				<input
 					type="checkbox"
 					onInput={(event) => {
@@ -95,10 +95,18 @@ export const Filter = ({ saveFunc, copyArr }) => {
 						});
 					}}
 				>
-					<option value={"by default"}>by default</option>
-					<option value={"newest"}>newest</option>
-					<option value={"price: high-low"}>price: high-low</option>
-					<option value={"price: low-high"}>price: low-high</option>
+					<option value={"by default"}>
+						by default
+					</option>
+					<option  value={"newest"}>
+						newest
+					</option>
+					<option  value={"price: high-low"}>
+						price: high-low
+					</option>
+					<option  value={"price: low-high"}>
+						price: low-high
+					</option>
 				</select>
 			</div>
 		</div>

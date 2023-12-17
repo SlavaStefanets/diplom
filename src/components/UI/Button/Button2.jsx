@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import style from './Button2.module.css'
 
+import style from "./Button2.module.css";
 
-export const Button2 = ({text,func}) => {
-	const [colorActiv, setColorActiv] = useState(false)
-  return (
+export const Button2 = ({ text, func }) => {
+	return (
 		<div>
-			<button className={style.btn} onClick={func}>
+			<button onClick={() => func()} className={style.btn}>
 				{text}
 			</button>
 		</div>
 	);
-}
+};

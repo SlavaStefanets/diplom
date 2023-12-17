@@ -8,9 +8,9 @@ export const CatigoriesPage = () => {
 	return (
 		<div>
 			<div className={style.nav}>
-				<LitlButton text="Main page" />
+				<LitlButton text="Main page" path={"/"} />
 				<div className={style.line} />
-				<LitlButton text="Categories" />
+				<LitlButton text="Categories" path={"/categories"} />
 			</div>
 			<div className={style.titleGlobal}>
 				<TitleGlobal title="Categories" color="black" />

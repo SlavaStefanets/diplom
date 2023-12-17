@@ -1,0 +1,15 @@
+.navM{
+  display: flex;
+  align-items: center;
+  padding: 40px 0 0 40px;
+}
+.line{
+	height: 1px;
+	background: #ddd;
+	width: 16px;
+}
+.title,
+.filter,
+.container{
+ padding: 40px 40px 0 40px;
+}

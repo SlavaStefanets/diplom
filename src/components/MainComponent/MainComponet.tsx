@@ -9,6 +9,8 @@ import { AllProductsPage } from "../Pages/AllProductsPage/AllProductsPage";
 import { AllSalesPage } from "../Pages/AllSalesPage/AllSalesPage";
 import { AllProductsFromCategorie } from "../Pages/CatigoriesPage/AllProductsFromCategorie";
 import { OneProductPage } from "../Pages/AllSalesPage/OneProductPage";
+import {BasketPage } from "../Pages/Basket/BasketPage"
+ 
 
 const MainComponent = () => {
 	const [dataCategories, setDataCategories] = useState([]);
@@ -42,6 +44,7 @@ const MainComponent = () => {
 				<Route path={"/products/:id"} element={<OneProductPage />} />
 				<Route path={"/allproducts"} element={<AllProductsPage />} />
 				<Route path={"/allsalespage"} element={<AllSalesPage />} />
+				<Route path={"/basket"} element={<BasketPage/>} />
 				<Route path={"/*"} />
 			</Routes>
 			<Footer />

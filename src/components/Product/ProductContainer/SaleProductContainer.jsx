@@ -4,7 +4,7 @@ import { ProductCard } from "../ProductCard/ProductCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const SaleProductContainer = () => {
+export const SaleProductContainer = ({visible}) => {
 	const [allProducts, setAllProducts] = useState([]);
 
 	const getAllProducts = async () => {
@@ -37,6 +37,8 @@ export const SaleProductContainer = () => {
 					title={el.title}
 					price={el.price}
 					discont_price={el.discont_price}
+					visible={visible}
+					id={el.id}
 				/>
 			))}
 		</div>

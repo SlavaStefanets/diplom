@@ -7,7 +7,7 @@ export const DiscountInfo = () => {
 		<div className={style.discountInfo}>
 			<div>
 				<h1 className={style.h1}>Amazing Discounts on Garden Products!</h1>
-				<Button2 text="Add to cart" />
+				<Button2 text="Check out" />
 			</div>
 		</div>
 	);

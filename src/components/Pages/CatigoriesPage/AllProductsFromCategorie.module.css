@@ -9,6 +9,7 @@
   gap: 32px;
   overflow: auto;
   flex-wrap: wrap;
+  position: relative;
 }
 .navMenu{
   display: flex;
@@ -19,4 +20,7 @@
 	background: #ddd;
 	width: 16px;
   margin-top: 16px;
+}
+.button2{
+  position: absolute;
 }
