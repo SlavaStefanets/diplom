@@ -1,0 +1,49 @@
+.popupWrapper {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(40, 40, 40, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.popupContent {
+	border-radius: 12px;
+	background: #393;
+	color: #fff;
+	padding: 20px;
+  position: relative;
+  max-width: 548px;
+  height: auto;
+}
+.btn {
+	width: 44px;
+	height: 44px;
+	flex-shrink: 0;
+  color: white;
+  background-color: #393;
+  border: none;
+  top: 32px;
+  right: 32px;
+  position: absolute;
+}
+.firstP{
+  padding:32px 0 24px 0 ;
+  color:  #FFF;
+font-family: Montserrat;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; 
+}
+.secondP{
+  color: #FFF;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; 
+max-width: 85%;
+}

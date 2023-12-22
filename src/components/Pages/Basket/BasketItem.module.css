@@ -22,19 +22,18 @@
 	font-style: normal;
 }
 .image {
-	max-width: 200px;
-	
+	max-width: 11em;
 }
 .container {
 	display: flex;
-  border-radius: 6px;
+	border-radius: 6px;
 	border: 1px solid rgb(217, 210, 210);
 	margin: 40px;
 	gap: 32px;
 }
 .rightContainer {
 	padding: 32px;
-  width: 580px;
+	width: 580px;
 	border-radius: 0 6px 6px 0;
 	border: 1px solid rgb(217, 210, 210);
 }
@@ -102,23 +101,113 @@
 	text-decoration-line: line-through;
 }
 .buttonDelite {
-  display: flex;
+	display: flex;
 	width: 24px;
 	height: 24px;
-  background-color: rgb(248, 243, 243);
-  position: absolute;
-  right: 32px;
-  border: none;
+	background-color: rgb(248, 243, 243);
+	position: absolute;
+	right: 32px;
+	border: none;
 }
-.titleButton{
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-.buttonDelite svg{
-  padding-bottom: 4px;
-  background-color: white;
-}
-.basketItemsOrderDetails{
+.titleButton {
 	display: flex;
+	width: 100%;
+	position: relative;
+}
+.buttonDelite svg {
+	padding-bottom: 4px;
+	background-color: white;
+}
+.basketItemsOrderDetails {
+	display: flex;
+}
+/* Order details */
+.hederOfOrder{
+	padding: 32px 0;
+}
+h3 {
+	color: #282828;
+	font-family: Montserrat;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%;
+}
+.orderDetailsContainer {
+	margin: 40px;
+	padding: 0 40px 40px 40px;
+	width: 50%;
+	background-color: #F1F3F4;
+	border-radius: 6px;
+}
+.totalPrice {
+	display: flex;
+	max-width: 600px;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.total {
+	color: #8b8b8b;
+	font-family: Montserrat;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%;
+	left: 0;
+}
+.price2 {
+	color: #282828;
+	font-family: Montserrat;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%;
+}
+.countAllItems {
+	color: #8b8b8b;
+	font-family: Montserrat;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%;
+	margin-top: 24px;
+}
+/* /////////form/////// */
+.form {
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 32px;
+}
+.form input {
+	background: white;
+	color: #8B8B8B;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%;
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 16px 32px;
+	margin-bottom: 16px;
+}
+.btn {
+	padding: 16px 32px;
+	color: #282828;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+}
+.textAndButton{
+	padding-left: 40px;
+	margin-bottom: 80px;
+}
+.litlText{
+	padding-bottom: 40px;
+}
+.btn2{
+	padding-bottom: 40px;
 }

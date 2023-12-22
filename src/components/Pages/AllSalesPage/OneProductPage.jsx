@@ -5,13 +5,13 @@ import axios from "axios";
 import style from "./OneProductPage.module.css";
 import { LitlButton } from "../../UI/LitlButton/LitlButton";
 import { Button2 } from "../../UI/Button/Button2";
-//import {addGoodInStorage} from '../../../utils/addGoodInStorage.js'
+
 
 export const OneProductPage = () => {
 	const { id } = useParams();
 	const [dataProduct, setDataProduct] = useState({});
 
-	const [productCount, setProductCount] = useState(0); //счетчик товара
+	const [productCount, setProductCount] = useState(0); 
 
 	const getProduct = async () => {
 		const response = await axios.get(
@@ -39,7 +39,6 @@ export const OneProductPage = () => {
 		}
 		let basket = localStorage.getItem("basket");
 
-		console.log(basket); /////////consol
 		if (basket) {
 			basket = JSON.parse(basket);
 
@@ -68,7 +67,7 @@ export const OneProductPage = () => {
 				<div className={style.line} />
 				<LitlButton
 					text="Tools and equipment"
-					path={"/categories/" + dataProduct.id}
+					path={"/categories/"}
 				/>
 				<div className={style.line} />
 				<LitlButton text={dataProduct.title} />
@@ -80,11 +79,6 @@ export const OneProductPage = () => {
 				<div className={style.productInfo}>
 					<p className={style.title}>{dataProduct.title}</p>
 					<div className={style.priceAndDiscountPrice}>
-						{dataProduct.discont_price && (
-							<div className={style.procent}>
-								<p style={{ display: "block" }}>-{discountProcent()}%</p>
-							</div>
-						)}
 						{dataProduct.discont_price ? (
 							<>
 								<p className={style.price}>${dataProduct.discont_price}</p>
@@ -92,6 +86,11 @@ export const OneProductPage = () => {
 							</>
 						) : (
 							<p className={style.price}>${dataProduct.price}</p>
+						)}
+						{dataProduct.discont_price && (
+							<div className={style.procent}>
+								<p style={{ display: "block" }}>-{discountProcent()}%</p>
+							</div>
 						)}
 					</div>
 					<div className={style.andToCard}>
@@ -104,6 +103,7 @@ export const OneProductPage = () => {
 								+
 							</button>
 						</div>
+
 						<Button2 func={addGoodInStorage} text="Add to cart" />
 					</div>
 					<div className={style.descriptionFoter}>

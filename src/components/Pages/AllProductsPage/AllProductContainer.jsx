@@ -5,7 +5,6 @@ import axios from "axios";
 import { ProductCard } from "../../Product/ProductCard/ProductCard";
 import { Filter } from "../../UI/Filter/Filter";
 
-
 export const AllProductContainer = ({ visible, isFiltered }) => {
 	const [allProducts, setAllProducts] = useState([]);
 	const [allCopyProducts, setAllCopyProducts] = useState([]);
@@ -31,16 +30,14 @@ export const AllProductContainer = ({ visible, isFiltered }) => {
 		setAllCopyProducts(copyArr);
 	}
 	return (
-		<div>
-		
-			<div>
-				<Filter
-					className={style.filter}
-					arr={allProducts}
-					copyArr={allCopyProducts}
-					saveFunc={saveFiltration}
-				></Filter>
-			</div>
+		<div className={style.container}>
+			<Filter
+				className={style.filter}
+				arr={allProducts}
+				copyArr={allCopyProducts}
+				saveFunc={saveFiltration}
+			></Filter>
+
 			<div className={style.container}>
 				{allProducts.map((el) => (
 					<ProductCard

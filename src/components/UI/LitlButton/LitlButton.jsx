@@ -1,11 +1,17 @@
 import React from "react";
 import style from "./LitlButton.module.css";
 import { Link } from "react-router-dom";
-export const LitlButton = ({ text ,path }) => {
+
+export const LitlButton = ({ text, path, btnBlack }) => {
 	return (
 		<div>
-			<button className={style.btn}>
-				<Link className={style.link} to={path}>{text}</Link>
+			<button>
+				<Link
+					to={path}
+					className={`${style.link} ${btnBlack ? style.btnBlack : ""}`}
+				>
+					{text}
+				</Link>
 			</button>
 		</div>
 	);

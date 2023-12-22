@@ -6,16 +6,16 @@ import { LitlButton } from "../../UI/LitlButton/LitlButton";
 
 export const CatigoriesPage = () => {
 	return (
-		<div>
+		<>
 			<div className={style.nav}>
 				<LitlButton text="Main page" path={"/"} />
 				<div className={style.line} />
-				<LitlButton text="Categories" path={"/categories"} />
+				<LitlButton text="Categories" path={"/categories"} btnBlack />
 			</div>
 			<div className={style.titleGlobal}>
 				<TitleGlobal title="Categories" color="black" />
 			</div>
 			<CategoriesContainer />
-		</div>
+		</>
 	);
 };

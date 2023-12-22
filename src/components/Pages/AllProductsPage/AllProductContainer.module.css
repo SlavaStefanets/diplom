@@ -4,3 +4,9 @@
 	flex-wrap: wrap;
   padding: 40px 0;
 }
+.filter{
+	display: flex;
+	gap: 32px;
+	flex-wrap: wrap;
+  padding: 40px 0;
+}

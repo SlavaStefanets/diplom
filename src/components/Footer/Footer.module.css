@@ -5,6 +5,8 @@
 }
 .footer {
 	padding: 0px 40px;
+	display: flex;
+	flex-wrap: wrap;
 }
 .frame {
 	display: flex;
@@ -55,8 +57,11 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-@media (max-width: 1380px) {
+@media (max-width: 1000px) {
 	.cards {
 		flex-wrap: wrap;
+	}
+	.texTwo{
+		font-size: 20px;
 	}
 }

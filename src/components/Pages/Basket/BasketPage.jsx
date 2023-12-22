@@ -1,10 +1,21 @@
-import React from 'react'
-import { BasketComponent } from './BasketComponent'
+import React, { useState, useEffect } from "react";
+import { BasketComponent } from "./BasketComponent";
 
 export const BasketPage = () => {
-  return (
-    <div>
-      <BasketComponent></BasketComponent>
-    </div>
-  )
-}
+	const [basketItems, setBasketItems] = useState([]);
+
+	function changeBasketItems(arr) {
+		setBasketItems(arr);
+	}
+	useEffect(() => {
+		setBasketItems(JSON.parse(localStorage.getItem("basket")));
+	}, []);
+	return (
+		<div>
+			<BasketComponent
+				basketItems={basketItems}
+				changeBasketItems={changeBasketItems}
+			></BasketComponent>
+		</div>
+	);
+};

@@ -2,8 +2,6 @@ import React from "react";
 import style from "./ProductCard.module.css";
 import { useNavigate } from "react-router-dom";
 import { Button2 } from "../../UI/Button/Button2";
-//import {addGoodInStorage} from '../../utils/addGoodInStorage.js'
-
 
 export const ProductCard = ({
 	img,
@@ -21,10 +19,6 @@ export const ProductCard = ({
 	}
 	const isSale = discont_price !== null;
 
-
-
-
-	
 	return (
 		<div
 			className={style.container}
@@ -32,7 +26,12 @@ export const ProductCard = ({
 		>
 			{
 				<div className={visible ? style.Button2 : style.btnFake}>
-					<Button2 text="Add to cart" />
+					<Button2
+						text="Add to cart"
+						func={() => {
+							navigate("/products/" + id);
+						}}
+					/>
 				</div>
 			}
 			{isSale && (

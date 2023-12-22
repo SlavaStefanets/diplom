@@ -1,42 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BasketItem1 } from "./BasketItem1";
 
-export const BasketItems = () => {
-	const [items, setItems] = useState([]);
+export const BasketItems = ({ refresh, changeBasketItems, basketItems }) => {
+	function changeCount(id, diff) {
+		const newArr = basketItems.map((elem) => {
+			if (id === elem.id) {
+				if (diff < 0 && elem.count === 0) return elem;
 
-	useEffect(() => {
-		console.log(JSON.parse(localStorage.getItem("basket")));
-		setItems(JSON.parse(localStorage.getItem("basket")));
-	}, []);
+				return { ...elem, count: elem.count + diff };
+			} else {
+				return elem;
+			}
+		});
+		changeBasketItems(newArr);
 
-  function changeCount(id,diff) {
-    const newArr = items.map((elem)=> {
-      if(id === elem.id){
-        return {...elem,count:elem.count+diff}
-      }else{
-        return elem;
-      }
-    })
-    setItems(newArr)
-    localStorage.setItem('basket',JSON.stringify(newArr))
-  }
+		localStorage.setItem("basket", JSON.stringify(newArr));
+	}
 
-  function deleteItem(id){
-    const newArr = items.filter((elem)=>{
-      if(id == elem.id){
-        return false;
-      } else{
-        return true;
-      }
-    })
-    
-    setItems(newArr)
-    localStorage.setItem('basket',JSON.stringify(newArr))
-  }
+	function deleteItem(id) {
+		const newArr = basketItems.filter((elem) => {
+			if (id == elem.id) {
+				return false;
+			}else{
+				return true;
+			}
+		});
+
+		changeBasketItems(newArr);
+		localStorage.setItem("basket", JSON.stringify(newArr));
+	}
 
 	return (
 		<div>
-			{items.map((el) => {
+			{basketItems&&basketItems.map((el) => {
 				return (
 					<BasketItem1
 						key={el.id}
@@ -46,8 +42,8 @@ export const BasketItems = () => {
 						discont_price={el.discont_price}
 						image={el.image}
 						count={el.count}
-            changeCount={changeCount}
-            deleteItem={deleteItem}
+						changeCount={changeCount}
+						deleteItem={deleteItem}
 					></BasketItem1>
 				);
 			})}

@@ -17,3 +17,11 @@
 	font-style: normal;
 	font-weight: 500;
 }
+@media (max-width: 1000px) {
+  .navMenu {
+    display: none;
+  }
+	.basket{
+		display: none;
+	}
+}

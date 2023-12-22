@@ -9,9 +9,13 @@ export const AllSalesPage = () => {
 	return (
 		<div className={style.container}>
 			<div className={style.headerElements}>
-				<LitlButton text="Mainn page" path={"/"}></LitlButton>
+				<LitlButton text="Mainn page" path={"/"} />
 				<div className={style.line}></div>
-				<LitlButton text="All sales" path={"/allsalespage"}></LitlButton>
+				<LitlButton
+					text="All sales"
+					path={"/allsalespage"}
+					btnBlack
+				></LitlButton>
 			</div>
 			<TitleGlobal title="Discounted items" color="black" />
 			<div className={style.allProductsContainer}>

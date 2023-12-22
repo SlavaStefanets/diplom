@@ -106,3 +106,14 @@ img {
 	font-size: 250%;
 	color: #7a7070;
 }
+.procent {
+	display: flex;
+	padding: 4px 8px;
+	margin-bottom: 50px;
+	color: white;
+	justify-content: flex-end;
+	align-items: flex-start;
+	gap: 10px;
+	border-radius: 6px;
+	background: #393;
+}

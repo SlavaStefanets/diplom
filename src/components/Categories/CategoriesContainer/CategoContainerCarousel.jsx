@@ -1,12 +1,30 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { useAllCategories } from "../../../hooks/useAllCategories/useAllCategories";
 import { CategoryCard } from "../CategoryCard/CategoryCard";
-import { style } from "./CategoContainerCarousel.modules.css";
+import style from "./CategoContainerCarousel.modules.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export const CategoContainerCarousel = () => {
-	const allCategories = useAllCategories();
+
+	const [categories, setCategories] = useState([]);
+
+	const getAllCategoryes = async () => {
+		const response = await axios.get(
+			"https://telran-project-backend-y5gf.onrender.com/categories/all"
+		);
+			console.log(response.data);
+		setCategories(response.data);
+	};
+
+	useEffect(() => {
+		getAllCategoryes();
+	}, []);
+
+	// return categories;
+// };
+
 
 	return (
 		<Splide
@@ -32,12 +50,12 @@ export const CategoContainerCarousel = () => {
 			}}
 			// extensions={{ AutoScroll }}
 		>
-			{allCategories.map((el,index) => (
+			{categories.map((el, index) => (
 				<SplideSlide key={el.id}>
 					<CategoryCard
 						img={`https://telran-project-backend-y5gf.onrender.com${el.image}`}
 						title={el.title}
-						categoryNum={index+1}
+						categoryNum={index + 1}
 					/>
 				</SplideSlide>
 			))}

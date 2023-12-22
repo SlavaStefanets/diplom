@@ -40,7 +40,9 @@ export const SendCuponForm = () => {
 						value={email}
 						onInput={(e) => setEmail(e.target.value)}
 					></input>
-					<button className={style.btn}>Get a discount</button>
+					<button className={style.btn} >
+						Get a discount
+					</button>
 				</form>
 			</div>
 		</div>

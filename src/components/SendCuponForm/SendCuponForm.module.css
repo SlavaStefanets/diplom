@@ -37,5 +37,12 @@
 	font-style: normal;
 	font-weight: 600;
 }
-
+.image{
+width: 100%;
+}
+@media (max-width: 1000px){
+	.image{
+		display: none;
+	}
+}
 

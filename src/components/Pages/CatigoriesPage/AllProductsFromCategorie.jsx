@@ -7,8 +7,6 @@ import { ProductCard } from "../../Product/ProductCard/ProductCard";
 import style from "./AllProductsFromCategorie.module.css";
 import { Filter } from "../../UI/Filter/Filter";
 import { LitlButton } from "../../UI/LitlButton/LitlButton";
-import { Link } from "react-router-dom";
-import { Button2 } from "../../UI/Button/Button2";
 
 export const AllProductsFromCategorie = () => {
 	const { id } = useParams();
@@ -21,7 +19,7 @@ export const AllProductsFromCategorie = () => {
 		const response = await axios.get(
 			"https://telran-project-backend-y5gf.onrender.com/categories/" + id
 		);
-		console.log(response.data)
+		
 		setDataProducts(response.data.data);
 		setCopyDataProducts(response.data.data);
 		setoObjCategories(response.data.category);
@@ -43,7 +41,12 @@ export const AllProductsFromCategorie = () => {
 				<div className={style.line} />
 				<LitlButton text="Categories" path={"/categories"} />
 				<div className={style.line} />
-				<LitlButton className={style.activeBtn} text="Tools and equipment" />
+				<LitlButton
+					className={style.activeBtn}
+					text="Tools and equipment"
+					path={"/categories/:id"}
+					btnBlack
+				/>
 			</div>
 			<TitleGlobal title="Tools and equipment" color="black" />
 			<div className={style.filterMenu}>

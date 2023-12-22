@@ -1,0 +1,85 @@
+.container {
+  display: none;
+}
+
+.container.open {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+
+.burgerNav {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: rgb(45, 39, 39);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 1s ease;
+}
+
+.burgerNav.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.burgerNav > *:not(:first-child) {
+  padding: 15px;
+  color: white;
+  font-size: 30px;
+  line-height: 1.5;
+  transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.burgerNav > *:not(:first-child, :last-child):hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+
+.title {
+  padding: 20px;
+  background-color: #5ed85e;
+  color: rgb(24, 18, 18);
+  font-size: 30px;
+  line-height: 1.5;
+  transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.burger {
+  display: none;
+}
+
+.burger.open {
+  color: white;
+  display: block;
+  position: fixed;
+  right: 50vw;
+  z-index: 1000;
+  top: 0;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: block;
+  }
+
+  .burger {
+    display: block;
+  }
+}
