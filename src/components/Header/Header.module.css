@@ -17,11 +17,24 @@
 	font-style: normal;
 	font-weight: 500;
 }
+.basket {
+	display: flex;
+	position: relative;
+}
+.count {
+	position: absolute;
+	padding: 8px;
+	color: white;
+}
+.svg {
+	position: absolute;
+	margin: 4px auto 15px 0;
+}
 @media (max-width: 1000px) {
-  .navMenu {
-    display: none;
-  }
-	.basket{
+	.navMenu {
+		display: none;
+	}
+	.basket {
 		display: none;
 	}
 }

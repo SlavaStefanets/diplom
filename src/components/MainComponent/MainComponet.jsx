@@ -15,7 +15,6 @@ import NotFound from "../Pages/NotFound/NotFound";
 const MainComponent = () => {
 	const [dataCategories, setDataCategories] = useState([]);
 
-
 	const getAllCategoryes = async () => {
 		const response = await axios.get(
 			"https://telran-project-backend-y5gf.onrender.com/categories/all"
@@ -27,7 +26,6 @@ const MainComponent = () => {
 
 		setDataCategories(response.data);
 	};
-
 
 	useEffect(() => {
 		getAllCategoryes();
@@ -46,13 +44,8 @@ const MainComponent = () => {
 				<Route path={"/products/:id"} element={<OneProductPage />} />
 				<Route path={"/allproducts"} element={<AllProductsPage />} />
 				<Route path={"/allsalespage"} element={<AllSalesPage />} />
-				<Route
-					path={"/basket"}
-					element={
-						<BasketPage/>
-					}
-				/>
-				<Route path={"/*"} element={<NotFound/>}/>
+				<Route path={"/basket"} element={<BasketPage />} />
+				<Route path={"/*"} element={<NotFound />} />
 			</Routes>
 			<Footer />
 		</div>

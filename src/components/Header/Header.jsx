@@ -4,14 +4,10 @@ import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
 import { Link } from "react-router-dom";
 import BurgerMenu from '../Burger/BurgerMenu'
-// import { useState} from "react-router-dom";
 
 
 export const Header = () => {
-	// const [state,setState] = useState([])
-	// useEffect(()=>{
-	// 	setState(JSON.parse(localStorage.getItem("basket")))
-	// })
+
 	function allItems() {
 		const basketStr = localStorage.getItem("basket");
 		const basketArr = JSON.parse(basketStr);
@@ -31,10 +27,20 @@ export const Header = () => {
 				<Link to={"/allproducts"}>All Products</Link>
 				<Link to={"/allsalespage"}>All sales</Link>
 			</div>
-			<BurgerMenu/>
-			<Link className={style.basket} to={'/basket'}>
+			<BurgerMenu />
+			<Link className={style.basket} to={"/basket"}>
 				<img className={style.cart} src={cart} alt="cart" />
-				<p> {allItems()}</p>
+				<svg
+				className={style.svg}
+					width="26"
+					height="26"
+					viewBox="0 0 26 26"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<circle cx="13" cy="13" r="13" fill="#339933" />
+				</svg>
+				<p className={style.count}> {allItems()}</p>
 			</Link>
 		</div>
 	);
