@@ -3,11 +3,9 @@ import style from "./Header.module.css";
 import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
 import { Link } from "react-router-dom";
-import BurgerMenu from '../Burger/BurgerMenu'
-
+import BurgerMenu from "../Burger/BurgerMenu";
 
 export const Header = () => {
-
 	function allItems() {
 		const basketStr = localStorage.getItem("basket");
 		const basketArr = JSON.parse(basketStr);
@@ -30,21 +28,26 @@ export const Header = () => {
 			<BurgerMenu />
 			<Link className={style.basket} to={"/basket"}>
 				<img className={style.cart} src={cart} alt="cart" />
-				<svg
-				className={style.svg}
-					width="26"
-					height="26"
-					viewBox="0 0 26 26"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<circle cx="13" cy="13" r="13" fill="#339933" />
-				</svg>
-				<p className={style.count}> {allItems()}</p>
+				{JSON.parse(localStorage.getItem("basket"))?.length !== 0 ? (
+					<svg
+						className={style.svg}
+						width="26"
+						height="26"
+						viewBox="0 0 26 26"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle cx="13" cy="13" r="13" fill="#339933" />
+					</svg>
+				) : (
+					""
+				)}
+				{JSON.parse(localStorage.getItem("basket"))?.length !== 0 ? (
+					<p className={style.count}> {allItems()}</p>
+				) : (
+					""
+				)}
 			</Link>
 		</div>
 	);
 };
-
-
-
